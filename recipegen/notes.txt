@@ -1,0 +1,29 @@
+Old Instructions for this folder:
+1. (Optional) Run `python train_model.py` to train the model and save it. A saved version already exists that you can use if you want to skip this step!
+2. Open a separate terminal and run `python app.py` to start the Flask server.
+3. In another terminal, run `python api_call.py filepath/to/jpeg` to call the API and generate a recipe. The argument is the image it'll generate the recipe based on.
+4. Note that this set of instructions is outdated and you can instead go to http://127.0.0.1:5000/ 
+
+Current Instructions for this folder
+1. run app.py. I've been running it from the project folder which is 'python recipegen/app.py', but I don't think it matters where you run it.
+2. Go to http://127.0.0.1:5000/ and input an image! So far I think it supports filetypes: png, jpeg. It does NOT support Screenshots (I think because the files have spaces in the name) or HEIC.
+3. Navigate through website. Don't forget to check the boxes!
+
+Improvements for the future:
+- Use punctuation! It gets removed in the tokenizer and I'd have to retrain the model to put it back in, which I don't have time for right now
+    below line before the tokenizer lines (which I include in a later note)
+    tokenizer = Tokenizer(filters='', oov_token="<OOV>")
+- Separate steps at the end of sentences with an action word as the start of the next sentences (can't implement now for the same reason)
+- Process the data better: when we train the model, add informative splits like (below) so that we can have model stop generating when it's 
+    done writing instead of after an arbitrary number of words. I have a version of the method that would potentially work for that in 
+    working_versions.
+    - I actually implemented this because I got an unexpected setback so maybe it'll work with this method and maybe it won't!
+- Meddle with which words we count as action words! Just play with it and try different things
+- Figure out how to make model only use provided ingredients. Right now I'm just trying to make it coherent, so I can't really make that adjustment.
+- Train on full dataset! For hella epochs!
+- Up the numbers on the LSTM layers!!! Add a third LSTM layer!!!
+
+Other Notes:
+- The recipes.parquet file could be used instead of the recipes.csv and it might be faster. I'm seeing it for the first time as I'm cleaning out the folder and I wish I'd seen it earlier!
+- working_versions.py has a few working versions of generate_recipe as well as two other functions that are used to generate the recipe in recipe_utils.py, just in case something bad happens to the recipe_utils.py file!
+- api_call.py can't be called from the terminal since it needs input from the user on the website. sorry!
