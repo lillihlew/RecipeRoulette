@@ -1,0 +1,148 @@
+/* Set a background color for the entire body */
+body {
+    background-color: #fffff0; /* Background color */
+    font-family: Verdana, sans-serif; /* Font for the text */
+    color: #333; /* Text color */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding inside the body */
+}
+
+
+
+/* Text styles */
+h1, h2, h3, h4, p, li{
+    text-align: left;
+}
+
+/* Style the main heading */
+h1 {
+    color: #ff9e06;
+    font-size: 2.5em; /* Size of the heading */
+    margin: 20px 0; /* Space above and below the heading */
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+/* Style subheadings */
+h2 {
+    color: #A87342;
+    margin: 15px 0; /* Space above and below the subheading */
+    margin-left: 55px;
+}
+
+/* Style subheadings */
+h3 {
+    color: #A87342; 
+    margin: 5px 0; /* Space above and below the subheading */
+    margin-left: 50px;
+}
+
+/* Style the additional information */
+h4 {
+    color: #c48c5c;
+    margin: 20px 0; /* Space above and below */
+    margin-left: 80px;
+}
+
+p{
+    color: #ff9e06;
+    margin-left: 50px;
+}
+
+li{
+    color: #333;
+    margin-left: 50px;
+}
+
+
+
+/* Image styles */
+.responsive-image {
+    display: block;
+    width: 33%;
+    height: auto;
+    margin: 5px;
+    margin-left: 55px;
+}
+.responsive-image-ingredients-page {
+    display: block;
+    width: 33%;
+    height: auto;
+    margin: 5px;
+}
+.top-right {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    max-width: 200px;
+    transition: transform 0.3s;
+}
+
+
+
+/* Style for the choose file and upload button flex container */
+form {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 30px 0; 
+}
+
+/* Style the input file and button */
+input[type="file"] {
+    margin: 10px; /* Space around the input */
+    width: 100%; /* Make buttons full-width or adjust as needed */
+    max-width: 200px; /* Set a max width if desired */
+    margin-left: 10px;
+}
+
+button {
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size */
+    margin-top: 10px; /* Space above the button */
+    margin-left: 10px
+}
+
+/* Change button color on hover */
+button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+
+/* Flex container styles */
+.flex-container-index {
+    display: flex; /* Enable Flexbox */
+    align-items: flex-start; /* Align items at the top */
+    justify-content: flex-start;
+    margin-top: 20px; /* Space above the flex container */
+}
+
+
+.flex-container-ingredients {
+    display: flex; /* Enable Flexbox */
+    align-self: center; 
+    justify-content: center;
+    margin-top: 20px; /* Space above the flex container */
+}
+
+/* Form styles */
+.ingredient-form {
+    display: flex; /* Flex layout for form */
+    flex-direction: column; /* Stack form elements vertically */
+    justify-content: center; 
+    align-items: center;
+}
+
+
+/* For index file, this isn't super well-developed and could be done better*/
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
