@@ -1,5 +1,6 @@
 DO NOT TOUCH THIS. ANY WORK YOU WANT TO TRY, DO IN THE PROJECT COPY FOLDER. THIS FOLDER WORKS. DO NOT BREAK IT.
 THIS WON'T WORK UNLESS YOU BRING IT TO YOUR DESKTOP, THAT'S WHERE THE ENVIRONMENT IS SET UP. BUT IT DOES WORK IN THE DESKTOP! I PUT IT AWAY FOR ORGANIZATION.
+It works just fine where it is, but should future errors occur, refer back to this! ^
 
 File system breakdown:
 - recipegen is the folder that generates the recipe based on input ingredients. It contains all of the non-html app methods and whatnot. I own everything in there except for the recipes dataset.
@@ -12,3 +13,10 @@ More info:
 - recipegen, templates, and yolov8 all have a txt file called notes.txt that gives more info about each folder.
 - all code can be run in project directory (I think) but there's no code that has to be run from its own directory.
     - not all code will work if running in terminal, since lots relies on app input
+
+
+
+To run: 
+1. run app.py from terminal. I've been running it from the project folder which is 'python recipegen/app.py', but I don't think it matters where you run it.
+2. Go to http://127.0.0.1:5000/ on a web browser and input an image! So far I think it supports filetypes: png, jpeg. It does NOT support Screenshots (I think because the files have spaces in the name) or HEIC.
+3. Navigate through website. Don't forget to check the boxes!
