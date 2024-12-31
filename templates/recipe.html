@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Recipe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .top-right {
+            position: absolute; /* Use absolute positioning */
+            top: 0px; /* Distance from the top */
+            right: 20px; /* Distance from the right */
+            max-width: 200px; /* Set a max width for the image */
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="top-right" data-rotate="310"> 
+    <div>{{ recipe|safe }}</div>   Render the recipe -->
+    <!-- <script>
+        // Get the logo image element
+        const img = document.querySelector('.top-right');
+        // Get the rotation value from the data attribute
+        const rotateValue = img.getAttribute('data-rotate');
+        // Apply rotation if the value exists
+        if (rotateValue) {
+            img.style.transform = `rotate(${rotateValue}deg)`;
+        }
+    </script>
+</body>
+</html> --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Recipe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="top-right" data-rotate="310"> 
+    <div class="recipe-container">{{ recipe|safe }}</div>  <!-- Render the recipe -->
+    
+    <script>
+        // Get the logo image element
+        const img = document.querySelector('.top-right');
+        // Get the rotation value from the data attribute
+        const rotateValue = img.getAttribute('data-rotate');
+        // Apply rotation if the value exists
+        if (rotateValue) {
+            img.style.transform = `rotate(${rotateValue}deg)`;
+        }
+    </script>
+</body>
+</html>

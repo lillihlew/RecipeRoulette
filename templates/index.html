@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="top-right" data-rotate="310"> 
+    <h1>Welcome to Recipe Roulette!</h1>
+    <h2>Upload an Image of the Ingredients in your Fridge</h2>
+    
+    <h4>For best results, clearly separate your ingredients and ensure they're visible so the model can detect them!</h4>
+    <h2>Example image:</h2>
+    
+    <div class="flex-container-index">
+        <img src="{{ url_for('static', filename='example.jpeg') }}" alt="example photo of my fridge at home" class="responsive-image">
+        <div id="info" style="align-self: center; justify-content: center; flex-basis: 300px; margin-left: 90px">
+            <form action="/upload-image" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*" required>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+        <div id="info" style="align-self: center;">
+            <h4>Recipe Roulette is a web application that generates a recipe for you based on ingredients it recognizes in a photo of your fridge.</h4>
+            <ul style="margin-left: 20px;">
+                <li>It can create new and exciting recipes you've never seen before</li>
+                <li>It can help add variety to your diet</li>
+                <li>It can make your life easier!</li>
+                <li>It can reduce food waste by helping you use unwanted ingredients</li>
+                <li>Cooking one of these recipes will create a memory you'll never forget! </li>
+            </ul>
+        </div>
+        
+    </div>
+    
+    <script>
+        // Get the logo image element
+        const img = document.querySelector('.top-right');
+        const rotateValue = img.getAttribute('data-rotate');
+        if (rotateValue) {
+            img.style.transform = `rotate(${rotateValue}deg)`;
+        }
+    </script>
+</body>
+</html>

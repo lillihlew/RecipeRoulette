@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredients Recognized</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function addIngredient() {
+            const ingredientList = document.getElementById('ingredient-list');
+            const newIngredientDiv = document.createElement('div');
+            newIngredientDiv.innerHTML = `
+                <label>
+                    <input type="checkbox" name="ingredients" value="">
+                    <input type="text" placeholder="Add ingredient" oninput="updateCheckboxValue(this)">
+                </label>
+            `;
+            ingredientList.appendChild(newIngredientDiv);
+        }
+
+        function updateCheckboxValue(input) {
+            const checkbox = input.previousElementSibling;
+            checkbox.value = input.value;
+        }
+    </script>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="top-right" data-rotate="310"> 
+    <h1>Recognized Ingredients</h1>
+    <h2>Select Ingredients You Would Like to Use for Recipe Generation</h2>
+    <h4>Make sure to actually check the boxes or you'll get an error!</h4>
+    <h3>Your Fridge and Ingredients Recognized: </h3>
+    
+
+    <div class="flex-container-ingredients" margin-left = 200px>
+        <img src="{{ url_for('static', filename='results_temp_image.jpg') }}" alt="Ingredient Image" class="responsive-image-ingredients-page">
+        <div class="ingredient-form">
+            <form action="/generate-recipe" method="post" id="recipe-form">
+                <div id="ingredient-list">
+                    {% for ingredient in ingredients %}
+                        <div>
+                            <label>
+                                <input type="checkbox" name="ingredients" value="{{ ingredient }}">
+                                {{ ingredient }}
+                            </label>
+                        </div>
+                    {% endfor %}
+                </div>
+                <button type="button" onclick="addIngredient()">Add More Ingredients</button>
+                <button type="submit">Generate Recipe</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        const img = document.querySelector('.top-right');
+        const rotateValue = img.getAttribute('data-rotate');
+        if (rotateValue) {
+            img.style.transform = `rotate(${rotateValue}deg)`;
+        }
+    </script>
+</body>
+</html>
