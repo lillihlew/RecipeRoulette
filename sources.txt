@@ -1,0 +1,38 @@
+Sources:
+- Sydney Jacobs for the initial concept of taking a picture and having a recipe generated based on the picture
+- Kate Walker-Spencer for the name
+- Preview and Apple Photos for the tools I used to make the app logo
+- chatgpt.com for a lot of python, css, and html help
+- Fernanda Eliott for letting me use her lab to run my models, for teaching me good coding practices, and for helping me work through bugs with yolov8 model training
+- The user for their data?
+- recipegen
+    - Recipes: https://www.kaggle.com/datasets/irkaal/foodcom-recipes-and-reviews?resource=download 
+    - Removing items from ingredients list: https://www.w3schools.com/python/python_lists_remove.asp 
+    - String contains in python: https://stackoverflow.com/questions/3437059/does-python-have-a-string-contains-substring-method 
+    - Iterating over a list in python: https://www.geeksforgeeks.org/iterate-over-a-list-in-python/ 
+    - Parsing string and separating based on a token in python: https://www.geeksforgeeks.org/split-and-parse-a-string-in-python/ 
+    - Capturing terminal output from image recognition yolov8 and using it in recipe generating api: https://www.youtube.com/watch?v=ZpcLxCLcSQ8 
+    - Command line arguments in python: https://www.geeksforgeeks.org/command-line-arguments-in-python/
+    - Save function python: https://stackoverflow.com/questions/36437326/change-saving-path-python
+    - Saving yolov8 model output: https://stackoverflow.com/questions/76899615/yolov8-how-to-save-the-output-of-model#:~:text=To%20save%20the%20original%20image,be%20shown%20in%20the%20output).&text=You%20can%20specify%20where%20to,project%20and%20experiment%20name%20name%20.
+    - Overwriting a saved image in python: https://stackoverflow.com/questions/47636088/overriding-original-image-using-pillow-in-python
+    - Copying files around in the terminal: https://askubuntu.com/questions/341752/copying-file-from-folder-1-to-folder-2-in-terminal
+- templates
+    - HTML images: https://www.w3schools.com/html/html_images.asp
+    - Rotating images: https://stackoverflow.com/questions/20061774/rotate-an-image-in-image-source-in-html
+    - Picking fonts: https://www.w3schools.com/css/css_font.asp
+    - Flex containers: https://w3schools.com/css/css3_flexbox_container.asp
+    - Aligning: https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left and https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
+    - Background color: https://encycolorpedia.com/fffff0
+    - Header font color: https://icolorpalette.com/color/ffce81
+- yolov8
+    - Yolo/darknet original source: https://pjreddie.com/darknet/yolo/ (not using it anymore but definitely used it for inspiration and as a jumping-off point)
+        - @article{yolov3,
+            title={YOLOv3: An Incremental Improvement},
+            author={Redmon, Joseph and Farhadi, Ali},
+            journal = {arXiv},
+            year={2018}
+          }
+    - Actually building and training yolov8: https://blog.roboflow.com/how-to-train-yolov8-on-a-custom-dataset/ 
+- yolov8fridgedata
+    - Refrigerator dataset, specifically YOLOv8 version: https://universe.roboflow.com/computer-vision-group-ji0bm/group_work/dataset/3 
