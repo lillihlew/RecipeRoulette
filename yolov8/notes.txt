@@ -1,0 +1,3 @@
+- You can't edit anything in here! You own myscript.py, results_temp_image.jpg, and temp_image.jpg, so you can edit those, but don't touch anything else! This software doesn't want to be edited, it's not mine, and it works, so LEAVE IT ALONE.
+- yolo8s.pt is "my" model like the one I trained on the refrigerator dataset. Do NOT mess with it.
+- To call myscript.py, it takes one argument, the image file to make predictions based on.
